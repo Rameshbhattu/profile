@@ -41,7 +41,7 @@ const Home = React.forwardRef((props, ref) => {
       )}
       {
         experiences.show && (
-          <Experience experiences={experiences}/>
+          <Experience experiences={experiences} />
         )
       }
       {repos.show && (
@@ -50,7 +50,7 @@ const Home = React.forwardRef((props, ref) => {
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
-          projects = {repos.projects}
+          projects={repos.projects}
         />
       )}
       {leadership.show && (
@@ -68,7 +68,7 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
-      
+
     </>
   );
 });
@@ -77,7 +77,7 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/profile">
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />

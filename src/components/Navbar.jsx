@@ -13,10 +13,11 @@ const Navigation = React.forwardRef((props, ref) => {
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
   const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
+
   useScrollPosition(
     ({ prevPos, currPos }) => {
       if (!navbarDimensions) return;
-      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
+      currPos.y + ref?.current?.offsetTop - navbarDimensions.bottom > 5
         ? setIsTop(true)
         : setIsTop(false);
       setScrollPosition(currPos.y);
@@ -26,7 +27,7 @@ const Navigation = React.forwardRef((props, ref) => {
 
   React.useEffect(() => {
     if (!navbarDimensions) return;
-    navBottom - scrollPosition >= ref.current.offsetTop
+    navBottom - scrollPosition >= ref?.current?.offsetTop
       ? setIsTop(false)
       : setIsTop(true);
   }, [navBottom, navbarDimensions, ref, scrollPosition]);
@@ -38,7 +39,7 @@ const Navigation = React.forwardRef((props, ref) => {
         }`}
       expand="lg"
     >
-      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"} style={{fontWeight:'bolder',fontSize:'30px',letterSpacing:"3px",textTransform:'uppercase'}}>
+      <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"} style={{ fontWeight: 'bolder', fontSize: '30px', letterSpacing: "3px", textTransform: 'uppercase' }}>
         {mainBody.firstName}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
