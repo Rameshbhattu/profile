@@ -40,8 +40,7 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/me.jpeg"),
   imageSize: 395,
-  message:
-    "My name is Ramesh Bhattu. I'm a graduate of 2020 from the National University of Sciences and Technology in Islamabad, with a degree in Computer Engineering. I have one year of experience in database development, specializing in MongoDB, SQL, and Node.js. I'm deeply passionate about contributing to the community through my work. My goal is to continue pursuing this passion within the field of database development. In my free time, I enjoy contributing to open-source projects.",
+  message:" My name is Ramesh Bhattu. I'm a graduate of 2020 from the Andhra University of Sciences and Technology in visakhaptnam, with a degree in BSc. I have experience in database development, specializing in MongoDB, SQL, and Node.js. I'm deeply passionate about contributing to the community through my work. My goal is to continue pursuing this passion within the field of database development. In my free time, I enjoy contributing to open-source projects.",
   resume: require('./Ramesh_bhattu.pdf'),
 };
 
