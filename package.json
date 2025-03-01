@@ -27,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "custom-deploy": "node pages.js",
-"publish:docker":"docker build -t ramesh216/github-docekerimage:2.0.0 docker push ramesh216/github-docekerimage:2.0.0"
+    "custom-deploy": "node pages.js"
+
   },
   "eslintConfig": {
     "extends": [
