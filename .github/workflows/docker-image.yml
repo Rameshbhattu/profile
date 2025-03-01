@@ -1,4 +1,4 @@
-name: javascript docker build
+name: Javascript Docker Build
 
 on:
   push:
@@ -13,8 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Build Docker image
+        run: |
+          docker build -t ramesh216/github-docekerimage:latest .
+
       - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login  -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Push Docker image
         run: docker push ramesh216/github-docekerimage:latest
